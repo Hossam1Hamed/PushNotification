@@ -29,3 +29,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 });
 
+Route::post('/', [\App\Http\Controllers\SendNotification::class, 'create']);
+Route::get('/', [\App\Http\Controllers\SendNotification::class, 'index']);
+Route::put('/', [\App\Http\Controllers\SendNotification::class, 'edit']);
+Route::delete('/', [\App\Http\Controllers\SendNotification::class, 'delete']);
